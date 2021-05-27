@@ -1,5 +1,11 @@
 var playerName = window.prompt("What is your robot's name?");
+// What is this?
+
 var playerHealth = 100;
+// check to see if the value of playerHealth is greater than 0
+if (playerHealth > 0) {
+   console.log("Your player is still alive!");
+}
 var playerAttack = 10;
 var playerMoney = 10;
 
@@ -9,6 +15,7 @@ var enemyName = "Roborto";
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+//Create Function
 var fight = function() {
     //Alert players they are starting the round
     window.alert("Welcome to Robot Gladiators!");
@@ -66,5 +73,5 @@ var fight = function() {
   } else { window.alert("You need to choose a valid option. Try again!");
   }
 }
-
+// Execute Function
 fight();
