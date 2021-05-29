@@ -68,6 +68,7 @@ var fight = function(enemy) {
     }
     //generate random damage value based on player's attack power (7,10)
     var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
+    enemy.health = Math.max(0, enemy.health - damage);
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
     enemy.health = Math.max(0,enemy.health - playerInfo.attack);
@@ -90,6 +91,7 @@ var fight = function(enemy) {
 
     //generate random number for damage from ememyAttack (9 to 12)
     var damage = randomNumber(enemy.attack - 3, enemy.attack);
+    playerInfo.health = Math.max(0, playerInfo.health - damage);
 
     // remove players's health by subtracting the amount set in the enemyAttack variable
     playerInfo.health = Math.max(0,playerInfo.health - enemy.attack);
